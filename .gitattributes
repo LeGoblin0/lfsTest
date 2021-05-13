@@ -1,0 +1,128 @@
+# Unity YAML 기반 자산 파일 용 매크로. 
+[attr] unityyaml ​​-text merge = unityyamlmerge diff
+
+# Git LFS를 사용해야하는 모든 바이너리 파일에 대한 매크로. 
+[attr] lfs -text 필터 = lfs diff = lfs merge = lfs
+
+# 자동 정규화 된 줄 끝을 기본값으로합니다. 
+* text = auto
+
+# 코드
+ * .cs text diff = csharp
+
+# Unity 텍스트 애셋
+ * .meta unityyaml 
+* .unity unityyaml 
+* .asset unityyaml 
+* .prefab unityyaml 
+* .mat unityyaml 
+* .anim unityyaml 
+* .controller unityyaml 
+* .overrideController unityyaml 
+* .physicMaterial unityyaml 
+* .physicsMaterial2D unityyaml 
+* .playable unityyaml 
+* .playable unityyaml 마스크 unityyaml 
+* .brush unityyaml 
+* .flare unityyaml 
+* .fontsettings unityyaml 
+* .guiskin unityyaml 
+* .giparams unityyaml 
+* .renderTexture unityyaml 
+* .spriteatlas unityyaml 
+* .terrainlayer unityyaml 
+* .mixer unityyaml 
+* .mshadervariants unityyaml 
+* .mshadervariants unityyaml 
+*. 텍스트 차이
+
+# Unity 바이너리 에셋
+ * .cubemap lfs 
+* .unitypackage lfs 
+# 참고 : Unity 터 레인 에셋에는 "-Terrain"접미사가 있어야합니다. 
+*-[Tt] errain.asset -unityyaml ​​lfs 
+# 참고 : Unity navmesh 에셋에는 "-NavMesh"접미사가 있어야합니다. 
+*-[Nn] av [Mm] esh.asset -unityyaml ​​lfs
+
+# 이미지
+ * .jpg lfs 
+* .jpeg lfs 
+* .png lfs 
+* .apng lfs 
+* .atsc lfs 
+* .gif lfs 
+* .bmp lfs 
+* .exr lfs 
+* .tga lfs 
+* .tiff lfs 
+* .tif lfs 
+* .iff lfs 
+* .pict lfs 
+* .dds lfs 
+* .xcf lfs 
+* .leo lfs 
+* .kra lfs 
+* .kpp lfs 
+* .clip lfs 
+* .webm lfs 
+* .webp lfs 
+* .svg lfs 
+* .svgz lfs 
+* .psd lfs 
+*. afphoto lfs 
+* .afdesign lfs
+
+# 오디오
+ * .mp3 lfs 
+* .ogg lfs 
+* .wav lfs 
+* .aiff lfs 
+* .aif lfs 
+* .mod lfs 
+* .it lfs 
+* .s3m lfs 
+* .xm lfs
+
+# 비디오
+ * .mov lfs 
+* .avi lfs 
+* .asf lfs 
+* .mpg lfs 
+* .mpeg lfs 
+* .mp4 lfs 
+* .flv lfs 
+* .ogv lfs 
+* .wmv lfs
+
+# 3D
+ * .fbx lfs 
+* .obj lfs 
+* .max lfs 
+* .blend lfs 
+* .blender lfs 
+* .dae lfs 
+* .mb lfs 
+* .ma lfs 
+*. 3 ds lfs 
+* .dfx lfs 
+* .c4d lfs 
+* .lwo lfs 
+* .lwo2 lfs 
+* .abc lfs 
+*. 3 dm lfs 
+* .bin lfs 
+* .glb lfs
+
+# 실행 파일
+ * .exe lfs 
+* .dll lfs 
+* .so lfs 
+* .pdb lfs 
+* .mdb lfs
+
+# 패키징
+ * .zip lfs 
+*. 7 z lfs 
+* .gz lfs 
+* .rar lfs 
+* .tar lfs
